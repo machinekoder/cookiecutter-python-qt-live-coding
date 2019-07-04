@@ -1,0 +1,14 @@
+sudo: false
+language: python
+python:
+  - 3.7
+#env:
+#  - TOX_ENV=py
+#  - TOX_ENV=flake8
+install:
+  - pip install -I -e .[dev]
+  - pip install PySide2
+script:
+  - pytest -v .
+#after_success:
+  #coveralls
