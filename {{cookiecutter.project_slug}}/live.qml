@@ -25,7 +25,9 @@ ApplicationWindow {
   }
 
   Component.onDestruction: {
+    if (root.screen.serialNumber) {
       windowSettings.screen = root.screen.serialNumber
+    }
   }
 
   LiveCodingPanel {
